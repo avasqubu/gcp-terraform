@@ -8,12 +8,12 @@ terraform {
 }
 
 resource "google_compute_instance" "vm" {
-  name = "maquina-virtual"
-  machine_type = "n1-standard-1"
-  zone = "us-central1"
+  name = "var.instance_name"
+  machine_type = "var.machine_type"
+  zone = "var.region"
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-11"
+      image = "var.image"
     }
   }
 }
