@@ -13,11 +13,8 @@ pipeline {
             gcloud compute zones list
           '''        
 
+        }
       }
     }
   }
 }
-
-
-
-
