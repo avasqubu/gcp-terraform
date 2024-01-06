@@ -11,8 +11,7 @@ pipeline {
             gcloud version
             gcloud auth activate-service-account --key-file="$LAB_FINAL_GCP"
             gcloud compute zones list
-          '''        
-
+          '''      
         }
       }
     }
