@@ -51,5 +51,6 @@ post {
       echo 'Deployment or destruction failed! Investigate the logs.'
     }
   }
+}
 
 
