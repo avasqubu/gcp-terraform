@@ -6,7 +6,7 @@ pipeline {
   environment {
     GOOGLE_APPLICATION_CREDENTIALS = credentials ('lab-final-gcp')
   }
-/*  stages {
+  stages {
 
     stage('Plan changes') {
       steps {
@@ -19,7 +19,7 @@ pipeline {
       steps {
         sh "terraform apply -auto-approve"
       }
-    }*/
+    }
 
     stage('Destroy resource') {
       steps {
@@ -27,6 +27,4 @@ pipeline {
       }
     }
   }
-  
- // }
-//}
+}
