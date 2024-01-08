@@ -20,13 +20,13 @@ pipeline {
         sh "terraform apply -auto-approve"
       }
     }
-
+/*
     stage('Destroy resource') {
       steps {
         sh "terraform destroy -auto-approve"
       }
     } 
 
-
+*/
   }
 }
