@@ -2,7 +2,7 @@
 variable "region" {
   description = "La región donde se creará la instancia."
   type        = string
-  default     = "us-central1"
+  default     = "us-central1-a"
 }
 
 variable "machine_type" {
