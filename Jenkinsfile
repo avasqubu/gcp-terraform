@@ -15,10 +15,6 @@ pipeline {
       }
     }
 
-    stage('Review changes (optional)') {
-      input message: 'Do you want to apply the changes?', submitButton: 'Apply'
-    }
-
     stage('Apply changes') {
       steps {
         sh "terraform apply -auto-approve"
