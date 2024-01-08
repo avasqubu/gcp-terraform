@@ -38,6 +38,6 @@ pipeline {
     }
     failure {
       echo 'Deployment or destruction failed! Investigate the logs.'
-    }
-  }*/
+    }*/
+  }
 }
