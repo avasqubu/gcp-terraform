@@ -20,11 +20,8 @@ pipeline {
     }
 
     stage('Apply changes') {
-      when {
-        expression { return input.result == 'yes' || input.result == 'true' }
-      }
       steps {
-        sh "terraform apply -target=google_compute_instance -var-file=\"vars/${params.environment}.tfvars\""
+        sh "terraform apply -auto-approve"
       }
     }
 
