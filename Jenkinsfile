@@ -6,7 +6,7 @@ pipeline {
   environment {
     GOOGLE_APPLICATION_CREDENTIALS = credentials ('lab-final-gcp')
   }
-  stages {
+/*  stages {
 
     stage('Plan changes') {
       steps {
@@ -19,21 +19,14 @@ pipeline {
       steps {
         sh "terraform apply -auto-approve"
       }
-    }
+    }*/
 
- /*   stage('Destroy resource') {
+    stage('Destroy resource') {
       steps {
-        sh "terraform destroy -target=google_compute_instance -var-file=\"vars/${params.environment}.tfvars\""
+        sh "terraform destroy -auto-approve"
       }
     }
   }
-
-  post {
-    success {
-      echo 'VM deployed and destroyed successfully!'
-    }
-    failure {
-      echo 'Deployment or destruction failed! Investigate the logs.'
-    }*/
-  }
-}
+  
+ // }
+//}
