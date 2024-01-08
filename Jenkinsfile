@@ -11,11 +11,11 @@ pipeline {
     stage('Plan changes') {
       steps {
         sh 'terraform init'
- //       sh "terraform plan -target=google_compute_instance -var-file=\"vars/${params.environment}.tfvars\""
+        sh "terraform plan"
       }
     }
 
-/*    stage('Review changes (optional)') {
+    stage('Review changes (optional)') {
       input message: 'Do you want to apply the changes?', submitButton: 'Apply'
     }
 
@@ -28,7 +28,7 @@ pipeline {
       }
     }
 
-    stage('Destroy resource') {
+ /*   stage('Destroy resource') {
       steps {
         sh "terraform destroy -target=google_compute_instance -var-file=\"vars/${params.environment}.tfvars\""
       }
@@ -42,7 +42,5 @@ pipeline {
     failure {
       echo 'Deployment or destruction failed! Investigate the logs.'
     }
-  }
-}*/
-  }
+  }*/
 }
